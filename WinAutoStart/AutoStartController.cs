@@ -14,22 +14,34 @@ namespace WinAutoStart
         private string _args;
 
         public bool AutoStartActiv { get => IsAutoStartActiv(); }
-        public string Arguments { get { return _args; } set { _args = value; EnableAutoStart(); } }
 
 
+        /// <summary>
+        /// Set some Arguments
+        /// </summary>
+        public string Arguments { get => _args; set => _args = value; }
 
+
+        /// <summary>
+        /// Creates some Instance
+        /// </summary>
         public AutoStartController()
         {
             _appName = Assembly.GetEntryAssembly().GetName().Name;
         }
 
 
+        /// <summary>
+        /// Create some Instance
+        /// </summary>
         public AutoStartController(string args) : this() //call the base constructor
         {
             _args = args;
         }
 
-
+        /// <summary>
+        /// Create some Instance
+        /// </summary>
         public AutoStartController(string args, string appName)
         {
             _appName = appName;
@@ -44,7 +56,6 @@ namespace WinAutoStart
             try
             {
                 objValue = startupKey.GetValue(_appName);
-
             }
             catch (Exception ex)
             {
@@ -65,6 +76,9 @@ namespace WinAutoStart
             }
         }
 
+        /// <summary>
+        /// Returns the current value
+        /// </summary>
         public object GetValue()
         {
             if (startupKey.GetValue(_appName) != null)
@@ -74,6 +88,9 @@ namespace WinAutoStart
         }
 
 
+        /// <summary>
+        /// Enables autostart. If it's exist, key will be updated.
+        /// </summary>
         public void EnableAutoStart()
         {
             try
@@ -96,6 +113,9 @@ namespace WinAutoStart
 
         }
 
+        /// <summary>
+        /// Disables autostart if Key does exists
+        /// </summary>
         public void DisableAutoStart()
         {
             
@@ -110,6 +130,9 @@ namespace WinAutoStart
             }
         }
 
+        /// <summary>
+        /// Changes the values
+        /// </summary>
         public void ChangeAutoStartChecked()
         {
             if (AutoStartActiv)
