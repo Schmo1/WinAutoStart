@@ -1,6 +1,6 @@
 # WinAutoStart
 
-This is some libary to add your programm to the autostart on Windows via Regestry Key.
+This is some library to add your programm to the autostart on Windows via Regestry Key.
 
 Reg Path: "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
 
