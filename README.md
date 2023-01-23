@@ -1,12 +1,12 @@
 # WinAutoStart
 
-This is some library to add your programm to the autostart on Windows via Regestry Key.
+This is a library which enables you to add your program to the autostart on windows via registry key.
 
 Reg Path: "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
 
 ## Features include:
 
-- You cann add some arguments
-- Enable/Disable autostart
-- Call the current value
-- Change the state
+- Add arguments if you need ("-UI", "start", etc.)
+- Set current state Enable/Disable autostart method
+- Get the current state
+- Switch the current state
