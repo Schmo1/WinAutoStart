@@ -131,9 +131,9 @@ namespace WinAutoStart
         }
 
         /// <summary>
-        /// Changes the values
+        /// Switch the current state
         /// </summary>
-        public void ChangeAutoStartChecked()
+        public void SwitchAutoStartChecked()
         {
             if (AutoStartActiv)
                 DisableAutoStart();   // Remove the value from the registry so that the application doesn't start        
